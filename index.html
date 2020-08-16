@@ -1,0 +1,143 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+
+  <!-- <div id="canvasWrapper" style="height: 100%;">
+
+  </div> -->
+  <div class="row">
+    <div class="col-lg-3 col-sm-2"></div>
+<div class="col-lg-4 col-sm-2"><br>
+<canvas id="c" width="500" height="500" style="border:1px solid #000000;"></canvas>
+</div>
+
+<div class="col-lg-4 col-sm-2">
+  <br>
+    <button id="drawing-mode" class="btn btn-info">Cancel drawing mode</button><br><br>
+    <button id="clear-canvas" class="btn btn-danger">Clear</button><br><br>
+
+    <div id="drawing-mode-options">
+      <label for="drawing-mode-selector">Mode:</label>
+      <select id="drawing-mode-selector">
+        <option>Pencil</option>
+        <option>Circle</option>
+        <option>Spray</option>
+        <option>Pattern</option>
+
+        <option>hline</option>
+        <option>vline</option>
+        <option>square</option>
+        <option>diamond</option>
+        <option>texture</option>
+      </select>
+    <br>  <label for="drawing-line-width">Line width:</label>
+    <span class="info">0 </span><input type="range" value="00" min="0" max="150" id="drawing-line-width"><br>
+
+    <label for="drawing-color">Line color: </label>
+    <input type="color" value="#000000" id="drawing-color"><br>
+
+    <label for="drawing-shadow-color">Shadow color: </label>
+    <input type="color" value="#005E7A" id="drawing-shadow-color"><br>
+
+    <label for="drawing-shadow-width">Shadow width:</label>
+    <span class="info">0 </span><input type="range" value="0" min="0" max="50" id="drawing-shadow-width"><br>
+
+    <label for="drawing-shadow-offset">Shadow offset:</label>
+    <span class="info">0 </span><input type="range" value="0" min="0" max="50" id="drawing-shadow-offset"><br>
+
+</div>
+</div></div>
+
+
+
+  <!-- <div class="">
+                    <label class="mt2">Brush size</label>
+                    <hr class="my0">
+
+                    <div class="ui icon buttons size-btns mt1">
+                        <button class="ui button active" onclick="setBrush({width: 5})">S</button>
+                        <button class="ui button" onclick="setBrush({width: 10})">M</button>
+                        <button class="ui button" onclick="setBrush({width: 15})">L</button>
+                    </div>
+                </div>
+
+                <div class="mt2">
+                    <label>Brush color</label>
+                    <hr class="my0">
+                    <div class="ui icon buttons color-btns mt1">
+                        <button class="ui black active button" data-value="#000000">­</button>
+                        <button class="ui red button" data-value="#D01919">­</button>
+                        <button class="ui yellow button" data-value="#EAAE00">­</button>
+                        <button class="ui green button" data-value="#16AB39">­</button>
+                        <button class="ui blue button" data-value="#1678C2">­</button>
+                    </div>
+                    <div class="mt1">
+                        <input type="color" id="brushColor" style="width: 100%; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; padding: 0;">
+                    </div>
+
+                </div>
+
+
+
+                <div class="mt2" id="toolbox">
+                    <label>Drawing tools</label>
+                    <hr class="my0">
+
+                    <div class="ui icon buttons mt1">
+                        <button class="ui button" id="drwToggleDrawMode">
+                            <i class="pencil alternate icon"></i>
+                        </button>
+
+                        <button class="ui button" id="drwEraser">
+                            <i class="eraser icon"></i>
+                        </button>
+
+                        <button class="ui button" id="drwClearCanvas">
+                            <i class="trash alternate outline icon"></i>
+                        </button>
+                    </div>
+
+                    <div class="ui icon buttons mt1">
+                        <button class="ui button" id="shapeRect">
+                            <i class="square outline icon"></i>
+                        </button>
+                        <button class="ui button" id="shapeCircle">
+                            <i class="circle outline icon"></i>
+                        </button>
+                        <button class="ui button" id="shapeArrow">
+                            <i class="long arrow alternate right icon"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+
+
+                <div class="mt2">
+                    <label >Debug</label>
+                    <hr class="my0">
+                    <button class="ui basic red icon button mt1" id="debugButton"><i class="icon bug"></i></button>
+                </div>
+
+
+            </div> -->
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+
+            <script src="jquery.js"></script>
+              <!-- <script src="semantic.js"></script> -->
+              <script src="fabric.min.js"></script>
+              <!-- <script src="shapes.fabric.js"></script>
+              <script src="/socket.io/socket.io.js"></script> -->
+              <!-- <script src="script.js"></script> -->
+              <script src="my.js"></script>
+
+</body>
+
+
+</html>
